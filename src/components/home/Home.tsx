@@ -14,7 +14,7 @@ export const Home = () => {
     >
       <div
         style={{
-          width: "70vh",
+          width: "100%",
           padding: "32px 0px",
           display: "flex",
           justifyContent: "center",
@@ -47,8 +47,7 @@ export const Home = () => {
             utilizando filtros de realidad aumentada.
           </p>
         </div>
-        <div style={{ padding: "0px 113px" }}>
-          {" "}
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             onClick={goToRegister}
             style={{
