@@ -1,6 +1,8 @@
 import { Icon } from "../Icon";
-
+import classes from "../../styles/globalStyle.module.css";
+import { useMyNavigation } from "../../hooks/useMyNavigation";
 export const Home = () => {
+  const { goToRegister } = useMyNavigation();
   return (
     <div
       style={{
@@ -21,7 +23,14 @@ export const Home = () => {
         }}
       >
         <div style={{ padding: "0px 161px" }}>
-          <h2 style={{ textAlign: "center", fontSize: "120px", margin: 0 }}>
+          <h2
+            className={classes.textBorder}
+            style={{
+              textAlign: "center",
+              fontSize: "120px",
+              margin: 0,
+            }}
+          >
             <span>
               <Icon url="public/assets/home/Arrow1.svg" />
             </span>
@@ -41,6 +50,7 @@ export const Home = () => {
         <div style={{ padding: "0px 113px" }}>
           {" "}
           <button
+            onClick={goToRegister}
             style={{
               padding: "43px 113px",
               fontSize: "65px",
